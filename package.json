@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "flowbite": "^2.5.1",
-        "prop-types": "^15.8.1"
+        "prop-types": "^15.8.1",
+        "swiper": "^11.1.9"
     }
 }

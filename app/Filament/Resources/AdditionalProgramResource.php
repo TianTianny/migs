@@ -40,7 +40,7 @@ class AdditionalProgramResource extends Resource
                     ->image()
                     ->maxSize(1024)
                     ->required()
-                    ->directory('additiona-program-attachments')
+                    ->directory('additional-program-attachments')
                     ->label('Program Image'),
                 Toggle::make('is_active')
                     ->default(true)
