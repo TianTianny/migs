@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Hero;
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+
+class LandingPageController extends Controller
+{
+    public function index(Request $request)
+    {
+        $heroes = Hero::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get(['title', 'subtitle', 'image_url']);
+
+        return Inertia::render('Welcome', [
+            'heroes' => $heroes,
+        ]);
+    }
+}
