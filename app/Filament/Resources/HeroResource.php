@@ -39,7 +39,7 @@ class HeroResource extends Resource
                 FileUpload::make('image_url')
                     ->image()
                     ->maxSize(1024)
-                    ->nullable()
+                    ->required()
                     ->directory('hero-attachments')
                     ->label('Hero Image'),
                 Toggle::make('is_active')
@@ -47,6 +47,7 @@ class HeroResource extends Resource
                     ->label('Active'),
                 TextInput::make('sort_order')
                     ->numeric()
+                    ->required()
                     ->default(0)
                     ->label('Sort Order'),
             ]);

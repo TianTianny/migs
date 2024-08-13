@@ -13,8 +13,8 @@ return new class extends Migration {
         Schema::create('additional_programs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description')->nullable();
-            $table->string('image_url', 1024)->nullable();
+            $table->text('description');
+            $table->string('image_url', 1024);
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(0);
             $table->timestamps();

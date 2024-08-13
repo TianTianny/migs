@@ -34,18 +34,20 @@ class ProgramResource extends Resource
                     ->maxLength(255)
                     ->label('Name'),
                 Textarea::make('description')
-                    ->nullable()
+                    ->required()
                     ->label('Description'),
                 FileUpload::make('image_url')
                     ->image()
                     ->maxSize(1024)
-                    ->nullable()
+                    ->required()
+                    ->directory('program-attachments')
                     ->label('Program Image'),
                 Toggle::make('is_active')
                     ->default(true)
                     ->label('Active'),
                 TextInput::make('sort_order')
                     ->numeric()
+                    ->required()
                     ->default(0)
                     ->label('Sort Order'),
             ]);
