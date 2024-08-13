@@ -43,11 +43,11 @@ export default function Welcome({ heroes }) {
                 <MissionVisionValues />
                 <Programs />
                 <AdditionalPrograms />
-                <section className="py-10 bg-gray-300">
+                <section className="py-10 bg-gray-300 rounded-md">
                     <Advertisements ads={ads2} />
                 </section>
                 <WhyChooseUs />
-                <section className="py-5 bg-bgSkyBlue">
+                <section className="py-5 bg-bgSkyBlue rounded-md">
                     <Advertisements ads={ads3} />
                 </section>
                 <Testimonials />
