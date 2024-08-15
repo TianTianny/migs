@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Programs = ({ programs }) => {
+    useEffect(() => {
+        AOS.init({ duration: 500 });
+    }, []);
+
     const [imageLoaded, setImageLoaded] = useState(
         Array(programs.length).fill(false)
     );
@@ -21,7 +27,14 @@ const Programs = ({ programs }) => {
 
     return (
         <>
-            <section className="bg-bgSkyBlue h-full sm:h-screen py-8 mx-auto">
+            <section
+                data-aos="fade-up"
+                className="bg-bgSkyBlue h-full sm:h-full py-8 mx-auto"
+            >
+                {/* <section
+                data-aos="fade-up"
+                className="h-full sm:h-screen py-8 mx-auto"
+            > */}
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">
                         Programs
@@ -57,7 +70,11 @@ const Programs = ({ programs }) => {
                     >
                         {programs.map((program, index) => (
                             <SwiperSlide key={index} className="swiper-slide">
-                                <div className="flex flex-col justify-between items-center bg-white rounded-lg transition-transform duration-300 ease-in-out px-4 py-6 shadow-lg h-96 max-w-full">
+                                <div
+                                    className="flex flex-col justify-between items-center bg-white rounded-lg transition-transform duration-300 ease-in-out px-4 py-6 shadow-lg h-96 max-w-full"
+                                    data-aos="fade-right"
+                                    data-aos-delay={`${index * 50}`}
+                                >
                                     {/* Placeholder */}
                                     <div
                                         className={`w-full h-40 rounded-t-lg mb-4 bg-gray-300 ${

@@ -29,7 +29,12 @@ const ads3 = [
     { src: adsT, alt: "Ad 6" },
 ];
 
-export default function Welcome({ heroes, programs }) {
+export default function Welcome({
+    heroes,
+    programs,
+    additionalPrograms,
+    testimonials,
+}) {
     return (
         <>
             <Head title="Welcome" />
@@ -42,7 +47,7 @@ export default function Welcome({ heroes, programs }) {
                 <AboutUs />
                 <MissionVisionValues />
                 <Programs programs={programs} />
-                <AdditionalPrograms />
+                <AdditionalPrograms additionalPrograms={additionalPrograms} />
                 <section className="py-10 bg-gray-300 rounded-md">
                     <Advertisements ads={ads2} />
                 </section>
@@ -50,7 +55,7 @@ export default function Welcome({ heroes, programs }) {
                 <section className="py-5 bg-bgSkyBlue rounded-md">
                     <Advertisements ads={ads3} />
                 </section>
-                <Testimonials />
+                <Testimonials testimonials={testimonials} />
                 <ContactUs />
             </section>
             <Footer />
