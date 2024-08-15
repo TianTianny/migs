@@ -16,7 +16,7 @@ const ContactUs = () => {
 
     return (
         <>
-            <section className="min-h-full bg-white sm:h-screen pt-20 px-4 mx-auto">
+            <section className="min-h-full bg-white sm:h-full pt-20 px-4 mx-auto">
                 <div className="flex flex-col items-center justify-center">
                     <h1
                         className="text-4xl md:text-5xl text-accent font-arial font-bold"
@@ -63,7 +63,8 @@ const ContactUs = () => {
                     </button>
                 </form>
 
-                <div className="container absolute z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 mt-20 justify-between">
+                {/* <div className="container absolute z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 mt-20 justify-between"> */}
+                <div className="container z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 mt-20 justify-between">
                     <div
                         className="flex flex-col items-center flex-1"
                         data-aos="fade-up"
@@ -114,8 +115,9 @@ const ContactUs = () => {
                     </div>
                 </div>
 
-                <div className="relative bg-gray-100 mt-36 mx-auto max-w-6xl h-[240px] flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gray-100 p-6">
+                {/* <div className="relative bg-gray-100 mt-36 mx-auto max-w-6xl h-[240px] flex items-center justify-center"> */}
+                <div className="bg-gray-100 container mx-auto max-w-6xl h-[240px] flex items-center justify-center">
+                    <div className=" inset-0 bg-gray-100 p-6">
                         <div
                             className="flex sm:hidden flex-row items-center gap-2 my-2"
                             data-aos="fade-up"

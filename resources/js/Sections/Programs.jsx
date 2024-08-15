@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+    Autoplay,
+    Navigation,
+    Pagination,
+    Scrollbar,
+    A11y,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -46,11 +52,22 @@ const Programs = ({ programs }) => {
 
                 <div className="container mx-auto px-4 md:px-8 py-10 md:py-20">
                     <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        modules={[
+                            Autoplay,
+                            Navigation,
+                            Pagination,
+                            Scrollbar,
+                            A11y,
+                        ]}
+                        lazy="true"
                         spaceBetween={20}
                         slidesPerView={1}
                         centeredSlides={true}
                         loop={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
                         navigation={true}
                         breakpoints={{
                             640: {

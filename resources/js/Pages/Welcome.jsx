@@ -39,25 +39,45 @@ export default function Welcome({
         <>
             <Head title="Welcome" />
             <Navbar />
+
             <section className="max-w-7xl mx-auto">
                 <Hero heroes={heroes} />
-                <section className="py-10 bg-primary rounded-md">
+            </section>
+
+            <section className="py-10 bg-primary rounded-md">
+                <section className="max-w-7xl mx-auto">
                     <Advertisements ads={ads1} />
                 </section>
+            </section>
+
+            <section className="max-w-7xl mx-auto">
                 <AboutUs />
-                <MissionVisionValues />
-                <Programs programs={programs} />
-                <AdditionalPrograms additionalPrograms={additionalPrograms} />
-                <section className="py-10 bg-gray-300 rounded-md">
+            </section>
+
+            <MissionVisionValues />
+
+            <Programs programs={programs} />
+
+            <AdditionalPrograms additionalPrograms={additionalPrograms} />
+
+            <section className="py-10 bg-gray-300 rounded-md">
+                <section className="max-w-7xl mx-auto">
                     <Advertisements ads={ads2} />
                 </section>
-                <WhyChooseUs />
-                <section className="py-5 bg-bgSkyBlue rounded-md">
+            </section>
+
+            <WhyChooseUs />
+
+            <section className="py-5 bg-bgSkyBlue rounded-md">
+                <section className="max-w-7xl mx-auto">
                     <Advertisements ads={ads3} />
                 </section>
-                <Testimonials testimonials={testimonials} />
-                <ContactUs />
             </section>
+
+            <Testimonials testimonials={testimonials} />
+
+            <ContactUs />
+
             <Footer />
         </>
     );

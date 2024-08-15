@@ -4,6 +4,26 @@ import { Link } from "@inertiajs/react";
 import logo from "/public/image/Hero/LOGO.png";
 import smallLogo from "/public/image/Hero/LOGO 1.png";
 
+const menuItems = [
+    { name: "Home", href: "#", isActive: true },
+    { name: "About Us", href: "#", isActive: false },
+    { name: "Services", href: "#", isActive: false },
+    { name: "Our Team", href: "#", isActive: false },
+    { name: "Testimonials", href: "#", isActive: false },
+    { name: "Contact Us", href: "#", isActive: false },
+];
+
+import FBicon from "/public/image/Hero/F.png";
+import YTicon from "/public/image/Hero/YT.png";
+import IGicon from "/public/image/Hero/IG.png";
+
+// Define social media links
+const socialLinks = [
+    { href: "https://facebook.com", icon: FBicon, alt: "Facebook" },
+    { href: "https://youtube.com", icon: YTicon, alt: "YouTube" },
+    { href: "https://instagram.com", icon: IGicon, alt: "Instagram" },
+];
+
 const Navbar = () => {
     return (
         <>
@@ -46,24 +66,11 @@ const Navbar = () => {
             </nav>
 
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-                    <a
-                        href="https://flowbite.com/"
-                        className="flex items-center space-x-3 rtl:space-x-reverse"
-                    >
-                        {/* <img
-                            src="https://flowbite.com/docs/images/logo.svg"
-                            className="h-8"
-                            alt="Flowbite Logo"
-                        />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                            Flowbite
-                        </span> */}
-                    </a>
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                     <button
                         data-collapse-toggle="navbar-default"
                         type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                         aria-controls="navbar-default"
                         aria-expanded="false"
                     >
@@ -84,53 +91,52 @@ const Navbar = () => {
                             />
                         </svg>
                     </button>
-                    <div
-                        className="hidden w-full md:block md:w-auto"
-                        id="navbar-default"
-                    >
-                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                                    aria-current="page"
-                                >
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Services
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Pricing
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
+                    <div className="hidden w-full md:block" id="navbar-default">
+                        <div className="flex justify-between items-center">
+                            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                                {menuItems.map((item, index) => (
+                                    <li key={index}>
+                                        <a
+                                            href={item.href}
+                                            className={`block py-1 px-3 text-lg tight rounded ${
+                                                item.isActive
+                                                    ? "text-accent font-arialRounded tracking-tight hover:underline bg-skyBlue md:bg-transparent md:text-accent dark:text-white md:dark:text-blue-500"
+                                                    : "text-accent font-arialRounded tracking-tight hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                            }`}
+                                            aria-current={
+                                                item.isActive
+                                                    ? "page"
+                                                    : undefined
+                                            }
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            {/* Social Media Icons */}
+                            <div className="hidden sm:flex space-x-4">
+                                <h1 className="text-gray-400 font-arialRounded text-xl">
+                                    Follow us:
+                                </h1>
+                                {socialLinks.map((social, index) => (
+                                    <a
+                                        key={index}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-gray-400"
+                                    >
+                                        <img
+                                            src={social.icon}
+                                            alt={social.alt}
+                                            className="w-auto h-7"
+                                        />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
