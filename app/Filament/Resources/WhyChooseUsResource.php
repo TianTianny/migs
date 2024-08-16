@@ -25,6 +25,8 @@ class WhyChooseUsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $modelLabel = 'Why Choose Us Items';
+
     public static function form(Form $form): Form
     {
         return $form

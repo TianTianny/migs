@@ -34,6 +34,7 @@ export default function Welcome({
     programs,
     additionalPrograms,
     testimonials,
+    WhyChooseUsItems,
 }) {
     return (
         <>
@@ -66,7 +67,7 @@ export default function Welcome({
                 </section>
             </section>
 
-            <WhyChooseUs />
+            <WhyChooseUs WhyChooseUsItems={WhyChooseUsItems} />
 
             <section className="py-5 bg-bgSkyBlue rounded-md">
                 <section className="max-w-7xl mx-auto">
