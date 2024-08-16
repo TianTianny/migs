@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "@inertiajs/react";
 
 import logo from "/public/image/Hero/LOGO.png";
 import smallLogo from "/public/image/Hero/LOGO 1.png";
 
 const menuItems = [
-    { name: "Home", href: "#", isActive: true },
-    { name: "About Us", href: "#", isActive: false },
-    { name: "Services", href: "#", isActive: false },
-    { name: "Our Team", href: "#", isActive: false },
-    { name: "Testimonials", href: "#", isActive: false },
-    { name: "Contact Us", href: "#", isActive: false },
+    { name: "Home", href: "#hero", isActive: true },
+    { name: "About Us", href: "#about-us", isActive: false },
+    { name: "Services", href: "#programs", isActive: false },
+    // { name: "Our Team", href: "#programs", isActive: false },
+    { name: "Testimonials", href: "#testimonials", isActive: false },
+    { name: "Contact Us", href: "#contact-us", isActive: false },
 ];
 
 import FBicon from "/public/image/Hero/F.png";
@@ -19,12 +19,37 @@ import IGicon from "/public/image/Hero/IG.png";
 
 // Define social media links
 const socialLinks = [
-    { href: "https://facebook.com", icon: FBicon, alt: "Facebook" },
-    { href: "https://youtube.com", icon: YTicon, alt: "YouTube" },
+    {
+        href: "https://www.facebook.com/Migsinstitute4graphics/",
+        icon: FBicon,
+        alt: "Facebook",
+    },
+    {
+        href: "https://www.youtube.com/@MigsMastersInstituteforGraphic",
+        icon: YTicon,
+        alt: "YouTube",
+    },
     { href: "https://instagram.com", icon: IGicon, alt: "Instagram" },
 ];
 
 const Navbar = () => {
+    // const [bgColor, setBgColor] = useState("bg-white");
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY > 50) {
+    //             setBgColor("bg-gray-800");
+    //         } else {
+    //             setBgColor("bg-white");
+    //         }
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
+
     return (
         <>
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -65,6 +90,8 @@ const Navbar = () => {
                 </div>
             </nav>
 
+            {/* Sticky Navigation */}
+            {/* <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50"> */}
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                     <button

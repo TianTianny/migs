@@ -41,7 +41,7 @@ export default function Welcome({
             <Head title="Welcome" />
             <Navbar />
 
-            <section className="max-w-7xl mx-auto">
+            <section id="hero" className="max-w-7xl mx-auto">
                 <Hero heroes={heroes} />
             </section>
 
@@ -51,13 +51,15 @@ export default function Welcome({
                 </section>
             </section>
 
-            <section className="max-w-7xl mx-auto">
+            <section id="about-us" className="max-w-7xl mx-auto">
                 <AboutUs />
             </section>
 
             <MissionVisionValues />
 
-            <Programs programs={programs} />
+            <section id="programs">
+                <Programs programs={programs} />
+            </section>
 
             <AdditionalPrograms additionalPrograms={additionalPrograms} />
 
@@ -75,9 +77,13 @@ export default function Welcome({
                 </section>
             </section>
 
-            <Testimonials testimonials={testimonials} />
+            <section id="testimonials">
+                <Testimonials testimonials={testimonials} />
+            </section>
 
-            <ContactUs />
+            <section id="contact-us">
+                <ContactUs />
+            </section>
 
             <Footer />
         </>

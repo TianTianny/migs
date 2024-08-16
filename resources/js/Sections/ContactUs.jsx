@@ -63,71 +63,70 @@ const ContactUs = () => {
                     </button>
                 </form>
 
-                {/* <div className="container absolute z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 mt-20 justify-between"> */}
-                <div className="container z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 mt-20 justify-between">
-                    <div
-                        className="flex flex-col items-center flex-1"
-                        data-aos="fade-up"
-                    >
-                        <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
-                            <img
-                                src={MessageIcon}
-                                alt="Message Icon"
-                                className="w-10 h-10 object-contain"
-                            />
+                <div className="relative">
+                    <div className="absolute container hidden sm:block mx-auto inset-x-0 bottom-0 py-5 h-3/4 bg-gray-100 z-0"></div>
+
+                    {/* Content Container */}
+                    <div className="container relative z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 py-10 mt-4 justify-between">
+                        <div
+                            className="flex flex-col items-center flex-1"
+                            data-aos="fade-up"
+                        >
+                            <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
+                                <img
+                                    src={MessageIcon}
+                                    alt="Message Icon"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </div>
+                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                                info@migsinc.com
+                            </h1>
                         </div>
-                        <h1 className="mt-4 text-center text-lg font-medium text-accent">
-                            info@migsinc.com
-                        </h1>
-                    </div>
-                    <div
-                        className="flex flex-col items-center flex-1"
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                    >
-                        <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
-                            <img
-                                src={PhoneIcon}
-                                alt="Phone Icon"
-                                className="w-10 h-10 object-contain"
-                            />
+                        <div
+                            className="flex flex-col items-center flex-1"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
+                                <img
+                                    src={PhoneIcon}
+                                    alt="Phone Icon"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </div>
+                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                                +63 916 291 1218
+                            </h1>
                         </div>
-                        <h1 className="mt-4 text-center text-lg font-medium text-accent">
-                            +63 916 291 1218
-                        </h1>
-                    </div>
-                    <div
-                        className="flex flex-col items-center flex-1"
-                        data-aos="fade-up"
-                        data-aos-delay="400"
-                    >
-                        <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
-                            <img
-                                src={MapPinIcon}
-                                alt="Map Pin Icon"
-                                className="w-10 h-10 object-contain"
-                            />
+                        <div
+                            className="flex flex-col items-center flex-1"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                        >
+                            <div className="flex bg-primary rounded-full w-36 h-36 p-4 justify-center items-center shadow-lg">
+                                <img
+                                    src={MapPinIcon}
+                                    alt="Map Pin Icon"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </div>
+                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                                D-3 2F Plaza Victoria, Santo Rosario St., Sto
+                                Domingo, Angeles City 2009 Pampanga Philippines
+                            </h1>
                         </div>
-                        <h1 className="mt-4 text-center text-lg font-medium text-accent">
-                            D-3 2F Plaza Victoria, Santo Rosario St., Sto
-                            Domingo, Angeles City 2009 Pampanga Philippines
-                        </h1>
                     </div>
                 </div>
 
                 {/* <div className="relative bg-gray-100 mt-36 mx-auto max-w-6xl h-[240px] flex items-center justify-center"> */}
-                <div className="bg-gray-100 container mx-auto max-w-6xl h-[240px] flex items-center justify-center">
-                    <div className=" inset-0 bg-gray-100 p-6">
+                <div className="sm:hidden container h-[240px] flex items-start justify-start">
+                    <div className=" inset-0">
                         <div
                             className="flex sm:hidden flex-row items-center gap-2 my-2"
                             data-aos="fade-up"
                         >
-                            <img
-                                src={MessageIcon}
-                                alt="Map Pin Icon"
-                                className="w-10 h-10 object-contain"
-                            />
-                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                            <h1 className="mt-4 text-start text-lg font-medium text-accent">
                                 info@migsinc.com
                             </h1>
                         </div>
@@ -136,12 +135,7 @@ const ContactUs = () => {
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            <img
-                                src={PhoneIcon}
-                                alt="Map Pin Icon"
-                                className="w-10 h-10 object-contain"
-                            />
-                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                            <h1 className="mt-4 text-start text-lg font-medium text-accent">
                                 +63 916 291 1218
                             </h1>
                         </div>
@@ -150,12 +144,7 @@ const ContactUs = () => {
                             data-aos="fade-up"
                             data-aos-delay="400"
                         >
-                            <img
-                                src={MapPinIcon}
-                                alt="Map Pin Icon"
-                                className="w-10 h-10 object-contain"
-                            />
-                            <h1 className="mt-4 text-center text-lg font-medium text-accent">
+                            <h1 className="mt-4 text-start text-lg font-medium text-accent">
                                 D-3 2F Plaza Victoria, Santo Rosario St., Sto
                                 Domingo, Angeles City 2009 Pampanga Philippines
                             </h1>
