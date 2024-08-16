@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">
                         WHY CHOOSE US?
                     </h1>
-                    <h4 className="text-lg md:text-xl max-w-2xl font-arial text-center font-semibold text-accent tracking-wide mt-4">
+                    <h4 className="text-lg md:text-xl max-w-2xl px-2 font-arial text-center font-semibold text-accent tracking-wide mt-4">
                         (MIGS) Masters Institute for Graphics Inc. stands out as
                         the premier destination for aspiring creatives and
                         professionals in the graphics and visual arts industry.
