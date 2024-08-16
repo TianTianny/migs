@@ -27,6 +27,8 @@ class WhyChooseUsResource extends Resource
 
     protected static ?string $modelLabel = 'Why Choose Us Items';
 
+    protected static ?string $navigationGroup = 'Landing Page';
+
     public static function form(Form $form): Form
     {
         return $form
