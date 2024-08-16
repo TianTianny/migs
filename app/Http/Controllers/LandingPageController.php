@@ -6,6 +6,7 @@ use App\Models\AdditionalProgram;
 use App\Models\Hero;
 use App\Models\Program;
 use App\Models\Testimonial;
+use App\Models\WhyChooseUs;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -28,11 +29,14 @@ class LandingPageController extends Controller
         $testimonials = Testimonial::where('is_active', true)
             ->get(['id', 'name', 'occupation', 'message', 'user_path']);
 
+        $WhyChooseUsItems = WhyChooseUs::all();
+
         return Inertia::render('Welcome', [
             'heroes' => $heroes,
             'programs' => $programs,
             'additionalPrograms' => $additionalPrograms,
             'testimonials' => $testimonials,
+            'WhyChooseUsItems' => $WhyChooseUsItems,
         ]);
     }
 }
