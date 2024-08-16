@@ -64,7 +64,7 @@ const ContactUs = () => {
                 </form>
 
                 <div className="relative">
-                    <div className="absolute container hidden sm:block mx-auto inset-x-0 bottom-0 py-5 h-3/4 bg-gray-100 z-0"></div>
+                    <div className="absolute container hidden sm:block mx-auto inset-x-0 bottom-0 py-5 h-4/6 bg-gray-100 z-0"></div>
 
                     {/* Content Container */}
                     <div className="container relative z-10 mx-auto px-36 hidden sm:flex flex-row gap-4 py-10 mt-4 justify-between">

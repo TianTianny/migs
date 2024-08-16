@@ -6,12 +6,6 @@ const BannerItemLeft = ({ image, number, title, description }) => {
             className="relative flex items-center justify-center p-4 md:p-6 bg-contain bg-no-repeat bg-center cursor-pointer group"
             style={{ backgroundImage: `url(${image})`, height: "140px" }}
         >
-            {/* <div className="absolute right-4 md:right-12 top-1/3 transform -translate-y-1/2">
-                <span className="text-2xl md:text-6xl font-bold text-white">
-                    {number}
-                </span>
-            </div> */}
-
             {/* Title */}
             <div className="absolute flex flex-col items-center justify-center text-center text-white transition-transform duration-500 group-hover:-translate-y-8 group-hover:scale-75">
                 <h2 className="text-lg md:text-xl font-semibold">{title}</h2>

@@ -30,6 +30,7 @@ const ads3 = [
 ];
 
 export default function Welcome({
+    auth,
     heroes,
     programs,
     additionalPrograms,
@@ -39,7 +40,7 @@ export default function Welcome({
     return (
         <>
             <Head title="Welcome" />
-            <Navbar />
+            <Navbar auth={auth} />
 
             <section id="hero" className="max-w-7xl mx-auto">
                 <Hero heroes={heroes} />

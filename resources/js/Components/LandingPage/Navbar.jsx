@@ -32,24 +32,7 @@ const socialLinks = [
     { href: "https://instagram.com", icon: IGicon, alt: "Instagram" },
 ];
 
-const Navbar = () => {
-    // const [bgColor, setBgColor] = useState("bg-white");
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 50) {
-    //             setBgColor("bg-gray-800");
-    //         } else {
-    //             setBgColor("bg-white");
-    //         }
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
-
+const Navbar = ({ auth }) => {
     return (
         <>
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -73,19 +56,31 @@ const Navbar = () => {
                         />
                     </a>
                     <div className="flex items-center space-x-2">
-                        <Link
-                            href="/login"
-                            className="font-bold text-md md:text-xl hover:underline"
-                        >
-                            Sign In
-                        </Link>
-                        <span className="text-dark">|</span> {/* Separator */}
-                        <Link
-                            href="/register"
-                            className="font-bold text-md md:text-xl hover:underline"
-                        >
-                            Sign Up
-                        </Link>
+                        {auth.user ? (
+                            <Link
+                                href={route("logout")}
+                                method="post"
+                                className="font-bold text-md md:text-xl hover:underline"
+                            >
+                                Sign Out
+                            </Link>
+                        ) : (
+                            <>
+                                <Link
+                                    href="/login"
+                                    className="font-bold text-md md:text-xl hover:underline"
+                                >
+                                    Sign In
+                                </Link>
+                                <span className="text-dark">|</span>
+                                <Link
+                                    href="/register"
+                                    className="font-bold text-md md:text-xl hover:underline"
+                                >
+                                    Sign Up
+                                </Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </nav>
