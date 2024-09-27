@@ -16,9 +16,9 @@ return new class extends Migration {
             $table->string('surname')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('phone');
-            $table->date('birthday');
-            $table->enum('gender', ['male', 'female', 'other']);
+            $table->string('phone')->nullable();
+            $table->date('birthday')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
             $table->string('cover_path', 1024)->nullable();
             $table->string('avatar_path', 1024)->nullable();
             $table->boolean('is_admin')->default(false);
