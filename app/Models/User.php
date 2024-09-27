@@ -12,7 +12,7 @@ use Filament\Panel;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail, FilamentUser
 {
     use HasFactory, Notifiable;
 
@@ -70,7 +70,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public function canAccessPanel(Panel $panel): bool
     {
         if ($panel->getId() === 'admin') {
-            return $this->is_filament_admin;
+            return $this->is_admin;
         }
 
         return true;
