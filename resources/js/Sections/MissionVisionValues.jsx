@@ -13,7 +13,7 @@ const MissionVisionValues = () => {
     return (
         <>
             <div className="bg-primary h-4"></div>
-            <section className="min-h-full py-28 bg-gray-200 px-6 mx-auto">
+            <section className="min-h-full py-28 bg-gray-100 px-6 mx-auto">
                 <div className="container mx-auto px-4">
                     <div
                         className="text-center mb-12"

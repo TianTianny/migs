@@ -58,13 +58,15 @@ export default function Welcome({
 
             <MissionVisionValues />
 
-            <section id="programs" className="bg-bgSkyBlue py-20">
+            <section id="programs" className="bg-bgSkyBlue">
                 <Programs programs={programs} />
             </section>
 
-            <AdditionalPrograms additionalPrograms={additionalPrograms} />
+            <section>
+                <AdditionalPrograms additionalPrograms={additionalPrograms} />
+            </section>
 
-            <section className="py-10 bg-gray-300 rounded-md">
+            <section className="py-10 bg-gray-100 rounded-md">
                 <section className="max-w-7xl mx-auto">
                     <Advertisements ads={ads2} />
                 </section>

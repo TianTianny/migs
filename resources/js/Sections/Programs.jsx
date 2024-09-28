@@ -33,7 +33,7 @@ const Programs = ({ programs }) => {
         <>
             <section
                 data-aos="fade-up"
-                className="h-full sm:h-full py-8 mx-auto"
+                className="h-full sm:h-full py-28 mx-auto"
             >
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">
