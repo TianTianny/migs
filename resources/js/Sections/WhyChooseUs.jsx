@@ -13,7 +13,7 @@ const WhyChooseUs = ({ WhyChooseUsItems }) => {
         <>
             <section
                 data-aos="fade-up"
-                className="bg-bgSkyBlue min-h-full pt-10 py-2 mx-auto"
+                className="bg-bgSkyBlue min-h-full py-28 mx-auto"
             >
                 <div className="flex flex-col items-center justify-center mb-10">
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">

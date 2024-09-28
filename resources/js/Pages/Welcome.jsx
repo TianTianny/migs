@@ -58,7 +58,7 @@ export default function Welcome({
 
             <MissionVisionValues />
 
-            <section id="programs">
+            <section id="programs" className="bg-bgSkyBlue py-20">
                 <Programs programs={programs} />
             </section>
 

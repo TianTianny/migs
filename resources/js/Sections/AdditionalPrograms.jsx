@@ -20,7 +20,7 @@ const AdditionalPrograms = ({ additionalPrograms }) => {
     };
 
     return (
-        <section className="bg-gray-300 min-h-full flex items-center">
+        <section className="bg-gray-300 min-h-full py-20 flex items-center">
             <div className="py-4 px-10 container mx-auto">
                 <h1 className="text-4xl text-center text-accent font-arial font-bold py-5">
                     Additional Programs

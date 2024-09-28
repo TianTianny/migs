@@ -13,7 +13,7 @@ const MissionVisionValues = () => {
     return (
         <>
             <div className="bg-primary h-4"></div>
-            <section className="min-h-full bg-gray-200 py-8 px-6 mx-auto">
+            <section className="min-h-full py-28 bg-gray-200 px-6 mx-auto">
                 <div className="container mx-auto px-4">
                     <div
                         className="text-center mb-12"
@@ -59,7 +59,7 @@ const MissionVisionValues = () => {
                         </div>
 
                         <div
-                            className="flex-1 md:flex-[1_1_25%] p-6 rounded-2xl"
+                            className="flex-1 md:flex-[1_1_25%] bg-bgSkyBlue py-6 px-8 shadow-lg rounded-tr-2xl"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >

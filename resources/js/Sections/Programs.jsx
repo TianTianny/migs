@@ -33,7 +33,7 @@ const Programs = ({ programs }) => {
         <>
             <section
                 data-aos="fade-up"
-                className="bg-bgSkyBlue h-full sm:h-full py-8 mx-auto"
+                className="h-full sm:h-full py-8 mx-auto"
             >
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">
@@ -90,7 +90,7 @@ const Programs = ({ programs }) => {
                                 }`}
                             >
                                 <div
-                                    className={`program-card flex flex-col justify-between items-center bg-white rounded-lg transition-transform ease-in-out px-4 py-6 shadow-lg h-96 max-w-full`}
+                                    className={`program-card flex flex-col justify-between items-center bg-white rounded-lg transition-all duration-75 ease-in-out px-4 py-6 shadow-lg h-96 max-w-full`}
                                     data-aos="fade-right"
                                     data-aos-delay={`${index * 50}`}
                                 >

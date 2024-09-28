@@ -21,7 +21,7 @@ const WhyChooseUs = ({ testimonials }) => {
     return (
         <>
             <div className="bg-primary h-4"></div>
-            <section className="bg-white py-16 mx-auto" data-aos="fade-up">
+            <section className="bg-white py-28 mx-auto" data-aos="fade-up">
                 <div className="flex flex-col items-center justify-center mb-12">
                     <h1 className="text-4xl md:text-5xl text-center font-extrabold text-accent uppercase mb-4">
                         WHAT OUR STUDENTS SAY!

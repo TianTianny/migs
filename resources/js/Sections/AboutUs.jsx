@@ -14,7 +14,7 @@ const AboutUs = () => {
         <>
             <section
                 data-aos="fade-up"
-                className="bg-white container h-full sm:h-full py-4 mx-auto"
+                className="bg-white container h-full sm:h-full py-20 mx-auto"
             >
                 <div
                     className="flex flex-col items-center justify-center"
