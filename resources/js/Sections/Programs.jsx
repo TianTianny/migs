@@ -19,9 +19,7 @@ const Programs = ({ programs }) => {
         AOS.init({ duration: 500 });
     }, []);
 
-    const [imageLoaded, setImageLoaded] = useState(
-        Array(programs.length).fill(false)
-    );
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleImageLoad = (index) => {
         setImageLoaded((prev) => {
@@ -37,10 +35,6 @@ const Programs = ({ programs }) => {
                 data-aos="fade-up"
                 className="bg-bgSkyBlue h-full sm:h-full py-8 mx-auto"
             >
-                {/* <section
-                data-aos="fade-up"
-                className="h-full sm:h-screen py-8 mx-auto"
-            > */}
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl uppercase text-accent font-arial font-bold">
                         Programs
@@ -50,7 +44,7 @@ const Programs = ({ programs }) => {
                     </h4>
                 </div>
 
-                <div className="container mx-auto px-4 md:px-8 py-10 md:py-20">
+                <div className="container mx-auto px-4 md:px-8 py-10 md:py-16">
                     <Swiper
                         modules={[
                             Autoplay,
@@ -69,48 +63,42 @@ const Programs = ({ programs }) => {
                             disableOnInteraction: false,
                         }}
                         navigation={true}
+                        onSlideChange={(swiper) =>
+                            setActiveIndex(swiper.realIndex)
+                        }
                         breakpoints={{
                             640: {
                                 slidesPerView: 1,
-                                spaceBetween: 20,
+                                spaceBetween: 10,
                             },
                             768: {
                                 slidesPerView: 2,
-                                spaceBetween: 30,
+                                spaceBetween: 10,
                             },
                             1024: {
                                 slidesPerView: 3,
-                                spaceBetween: 40,
+                                spaceBetween: 20,
                             },
                         }}
                         className="mySwiper"
                     >
                         {programs.map((program, index) => (
-                            <SwiperSlide key={index} className="swiper-slide">
+                            <SwiperSlide
+                                key={index}
+                                className={`swiper-slide program-card ${
+                                    activeIndex === index ? "active-card" : ""
+                                }`}
+                            >
                                 <div
-                                    className="flex flex-col justify-between items-center bg-white rounded-lg transition-transform duration-300 ease-in-out px-4 py-6 shadow-lg h-96 max-w-full"
+                                    className={`program-card flex flex-col justify-between items-center bg-white rounded-lg transition-transform ease-in-out px-4 py-6 shadow-lg h-96 max-w-full`}
                                     data-aos="fade-right"
                                     data-aos-delay={`${index * 50}`}
                                 >
-                                    {/* Placeholder */}
-                                    <div
-                                        className={`w-full h-40 rounded-t-lg mb-4 bg-gray-300 ${
-                                            imageLoaded[index]
-                                                ? "hidden"
-                                                : "block animate-pulse"
-                                        }`}
-                                        style={{ minHeight: "10rem" }} // Ensure placeholder has consistent size
-                                    />
-                                    {/* Image */}
                                     <img
                                         src={program.image_url}
                                         alt={program.name}
                                         loading="lazy"
-                                        className={`w-full h-40 object-contain rounded-t-lg mb-4 ${
-                                            imageLoaded[index]
-                                                ? "block"
-                                                : "hidden"
-                                        }`}
+                                        className="w-full h-40 object-contain rounded-t-lg mb-4"
                                         onLoad={() => handleImageLoad(index)}
                                         onError={() =>
                                             console.error(
