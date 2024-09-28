@@ -42,7 +42,7 @@ const AboutUs = () => {
                     </div>
                     <div className="w-full sm:w-1/2" data-aos="fade-up">
                         <div className="flex flex-col gap-2">
-                            <p className="text-sm leading-normal font-arial text-gray-600">
+                            <p className="text-md leading-normal font-arial text-gray-600">
                                 Is a premier educational institution dedicated
                                 to nurturing and enhancing the talent and
                                 creativity of students in the field of graphics
@@ -51,7 +51,7 @@ const AboutUs = () => {
                                 empowers students to excel in their creative
                                 pursuits and professional careers.
                             </p>
-                            <p className="text-sm leading-normal font-arial text-gray-600">
+                            <p className="text-md leading-normal font-arial text-gray-600">
                                 At MIGS, we believe that every student possesses
                                 unique potential and creativity. Our goal is to
                                 unlock that potential through a blend of
