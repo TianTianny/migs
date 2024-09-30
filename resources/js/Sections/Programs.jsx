@@ -21,13 +21,13 @@ const Programs = ({ programs }) => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleImageLoad = (index) => {
-        setImageLoaded((prev) => {
-            const newLoaded = [...prev];
-            newLoaded[index] = true;
-            return newLoaded;
-        });
-    };
+    // const handleImageLoad = (index) => {
+    //     setImageLoaded((prev) => {
+    //         const newLoaded = [...prev];
+    //         newLoaded[index] = true;
+    //         return newLoaded;
+    //     });
+    // };
 
     return (
         <>
@@ -99,12 +99,12 @@ const Programs = ({ programs }) => {
                                         alt={program.name}
                                         loading="lazy"
                                         className="w-full h-40 object-contain rounded-t-lg mb-4"
-                                        onLoad={() => handleImageLoad(index)}
-                                        onError={() =>
-                                            console.error(
-                                                `Failed to load image at index ${index}`
-                                            )
-                                        }
+                                        // onLoad={() => handleImageLoad(index)}
+                                        // onError={() =>
+                                        //     console.error(
+                                        //         `Failed to load image at index ${index}`
+                                        //     )
+                                        // }
                                     />
                                     <div className="p-4 text-center flex flex-col justify-between flex-grow">
                                         <h3 className="text-xl md:text-3xl uppercase text-accent font-arial font-bold mb-2">

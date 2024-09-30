@@ -14,7 +14,19 @@ use Inertia\Inertia;
 //         'phpVersion' => PHP_VERSION,
 //     ]);
 // });
-Route::get('/', [LandingPageController::class, 'index']);
+Route::get('/', [LandingPageController::class, 'index'])->name('landing.show');
+
+Route::get('/terms', action: [LandingPageController::class, 'terms'])
+    ->name('terms.show');
+
+Route::get('/policy', [LandingPageController::class, 'policy'])
+    ->name('policy.show');
+
+Route::get('/copyright', [LandingPageController::class, 'copyright'])
+    ->name('copyright.show');
+
+Route::get('/faqs', [LandingPageController::class, 'faqs'])
+    ->name('faqs.show');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

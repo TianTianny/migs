@@ -39,4 +39,28 @@ class LandingPageController extends Controller
             'WhyChooseUsItems' => $WhyChooseUsItems,
         ]);
     }
+
+    public function policy(Request $request)
+    {
+        return Inertia::render('Legals/PrivacyPolicy', [
+        ]);
+    }
+
+    public function terms(Request $request)
+    {
+        return Inertia::render('Legals/TermsOfService', [
+        ]);
+    }
+
+    public function copyright(Request $request)
+    {
+        return Inertia::render('Legals/Copyright', [
+        ]);
+    }
+
+    public function faqs(Request $request)
+    {
+        return Inertia::render('Legals/Faqs', [
+        ]);
+    }
 }
