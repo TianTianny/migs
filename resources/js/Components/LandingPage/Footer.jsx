@@ -123,7 +123,7 @@ const Footer = () => {
 				<hr className="my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
 				<div className="sm:flex sm:items-center sm:justify-between">
 					<span className="text-sm text-white dark:text-gray-400">
-						© 2025{" "}
+						 © {new Date().getFullYear()}{" "}
 						<a
 							href="#"
 							className="hover:underline">
